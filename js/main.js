@@ -27,3 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Trigger a click on the first header to initially hide its content
   accordionHeaders[0].click();
 });
+
+
+function openNavbar() {
+  document.getElementById("navbar-responsive").style.left = "-80px";
+  // document.getElementById("navbar-responsive").style.top = "0";
+}
+function closeNavbar() {
+  document.getElementById("navbar-responsive").style.left = "-100%";
+  document.getElementById("main").style.left = "-100%";
+  // document.getElementById("navbar-responsive").style.top = "-100%";
+}
+
+document.getElementById("navbar-open").addEventListener("click", openNavbar);
+document.getElementById("navbar-close").addEventListener("click", closeNavbar);
+document.getElementById("main").addEventListener("click", closeNavbar);

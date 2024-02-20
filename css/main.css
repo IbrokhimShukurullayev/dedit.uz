@@ -21,20 +21,108 @@ header {
   height: 100%;
 }
 .nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 40px;
+  display: none;
+}
+@media (min-width: 900px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
 }
 .nav__link {
   color: #fff;
   font-size: 17px;
   line-height: 24px;
 }
+.nav__services {
+  display: none;
+}
+@media (min-width: 900px) {
+  .nav__services {
+    display: block;
+  }
+}
 
+#navbar-responsive {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* background-color: #342345; */
+  background-color: #142257;
+}
+
+.res__nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+
+.res__nav__link {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.mode-btn {
+  border: none;
+  background-color: transparent;
+}
+
+#navbar-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  color: red;
+}
+
+#navbar-open {
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: 900px) {
+  #navbar-close {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  #navbar-open {
+    display: none;
+  }
+}
 footer {
   background-color: #15b2f5;
 }
@@ -46,6 +134,10 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -54,7 +146,16 @@ footer {
           justify-content: space-between;
   background-color: #4ac9ff;
   border-radius: 20px;
+  row-gap: 30px;
   padding: 20px;
+}
+@media (min-width: 900px) {
+  .footer .subscribe {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 .footer .subscribe__left {
   display: -webkit-box;
@@ -82,29 +183,54 @@ footer {
 .footer .subscribe__right input {
   border-radius: 30px;
   border: none;
-  padding: 20px 200px 20px 10px;
+  padding: 10px 100px 10px 10px;
   color: #9ea3b5;
 }
+@media (min-width: 900px) {
+  .footer .subscribe__right input {
+    padding: 20px 200px 20px 10px;
+  }
+}
 .footer .subscribe__right button {
-  padding: 12px 20px;
+  padding: 7px 20px;
   background-color: #15b2f5;
   border-radius: 20px;
   position: absolute;
   right: 5px;
-  top: 8px;
+  top: 3.5px;
   color: #fff;
+}
+@media (min-width: 900px) {
+  .footer .subscribe__right button {
+    padding: 12px 20px;
+    right: 5px;
+    top: 8px;
+  }
 }
 .footer .footerhome {
   padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (min-width: 900px) {
+  .footer .footerhome {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .footer .footerhome__left p {
   color: #fff;
